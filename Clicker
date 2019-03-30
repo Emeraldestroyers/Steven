@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="FinalProject.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+        <title>Reinhardt Workshop</title>
+        <link rel="icon" href="Reinhardt Tokens.png">
+        <script>
+            var amount = 0;
+            var Uptwo = 1;
+            var UpThree = 0;
+            function Token(){
+                amount = amount + 1 * Uptwo + UpThree;
+                document.getElementById("Count").innerHTML= "You have " + amount + " tokens";
+            }
+            function One() {
+                if(amount>=2){
+                    amount = amount - 2;
+                    amount = amount + 10;
+                    
+                }
+                else {
+                    alert("You don't have enough tokens")
+                }
+            }
+            function Two(){
+                if(amount>=10){
+                    amount = amount - 10;
+                    Uptwo = 2;
+                    
+                }
+                else {
+                    alert("You don't have enough tokens")
+                }
+            }
+            function Three(){
+                if(amount>=20){
+                    amount = amount - 20;
+                    UpThree = 1000;
+                    
+                }
+                else {
+                    alert("You don't have enough tokens")
+                }
+            }
+        </script>
+        <style>
+        @font-face {
+    font-family: overwatch;
+    src: url(https://us.battle.net/forums/static/fonts/f014015d/f014015d.woff);
+  }
+  
+  @font-face {
+    font-family: overwatch-italic;
+    src: url(https://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff);
+  }
+ 
+ 
+ body {
+    text-align: center;
+    background-image: url(http://wallpapercanyon.com/wp-content/uploads/2016/01/Pattern-Wallpaper-10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: url(https://cdn.discordapp.com/attachments/303406782104207362/315839175406649345/Overwatch.cur), auto;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.left{
+    width: 60%;
+    float: left;
+    background-color: transparent;
+}
+
+.right{
+    width: 40%;
+    float: right;
+}
+
+.Upgrade{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: url(https://cdn.discordapp.com/attachments/303406782104207362/315839175406649345/Overwatch.cur), auto;
+    padding-top: 10px;
+    padding-right: 125px;
+    padding-bottom: 10px;
+    padding-left: 125px;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: overwatch-italic;
+  }
+
+.Ability {
+    cursor: url(https://cdn.discordapp.com/attachments/303406782104207362/315839175406649345/Overwatch.cur), auto;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.Title {
+    font-size: 35px;
+    line-height: 50%;
+}
+
+.Sub {
+    font-size: 30px;
+    line-height: 10%;
+    font-family: 'Baloo Chettan', cursive;
+    text-align: center;
+}
+
+.Head {
+    font-size: 60px;
+    line-height: 10%;
+    font-family: overwatch
+}
+
+.Img {
+    background: grey;
+  }
+
+.Web {
+    font-size: 20px;
+}
+</style>
+    </head>
+    <body>
+        <div>
+            <p class="Head">Welcome to Reinhardt Token Workshop</p>
+        </div>
+        <div class="left">
+                <p id="Count" class="Sub" >You have 0 token</p>
+                <button type="button" onclick="Token()" class="Mouse"><img src="Reinhardt.png" height="640px" width="634px" alt="Reinhardt Token"></button>
+        </div>
+
+        <div class="right" class="Ability" >
+            <p class="Sub">Ability:</p>
+            <button type="button" onclick="One()" class="Upgrade"><p class="Title">Rocket Hammer</p><p>adds 10 tokens</p><p>Cost: 2 Tokens</p></button>
+            <br>
+            <br>
+            <button type="button" onclick="Two()" class="Upgrade"><p class="Title">Fire Strike</p><p>2x tokens per click</p><p>Cost: 10 Tokens</p></button>
+            <br>
+            <br>
+            <button type="button" onclick="Three()" class="Upgrade"><p class="Title">Earthshatter</p><p>+1000 per click</p><p>Cost: 20 Tokens</p></button>
+            <br><br>
+            <a href="https://playoverwatch.com/en-us/"><p class="Web">Overwatch Offical Website</p></a>
+            <a href="https://www.overwatchleague.com/"><p class="Web">Overwatch League</p></a>
+        </div>
+    </body>
+</html>
